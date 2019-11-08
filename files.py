@@ -54,10 +54,3 @@ def horizontal_write (file, names, areas):
         result_writer.writerow(areas)
 
 horizontal_write(patientID, names, areas)
-
-def vertical_write (file, list1):
-    with open(file, mode='w') as origin:
-        result_writer = csv.writer(origin, delimiter = ',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        result_writer.writerow((patientID, ''))
-        for num in range(0, len(list1)):
-            result_writer.writerow((list1[num],''))
